@@ -8,6 +8,8 @@
 
 TEST_CASE("BVH test") {
     BVH* render = new BVH(1920, 1080);
+    // The app works with spheres, this test also works with spheres, but the reference is mirror
+    // I assume spheres are expected everywhere.
     int result = render->LoadGeometry("models/CornellBox-Sphere.obj");
     REQUIRE(result == 0);
     render->SetCamera(float3{ 0.0f, 0.795f, 1.6f }, float3{ 0, 0.795f, -1 }, float3{ 0, 1, 0 });

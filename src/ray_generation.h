@@ -16,7 +16,6 @@ public:
 	Ray(float3 position, float3 direction) : position(position) {
 		this->direction = normalize(direction);
 	};
-	~Ray() {};
 	float3 position;
 	float3 direction;
 };
@@ -33,9 +32,6 @@ public:
 class Camera
 {
 public:
-	Camera();
-	~Camera();
-
 	void SetPosition(float3 position);
 	void SetDirection(float3 direction);
 	void SetUp(float3 approx_up);
